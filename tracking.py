@@ -12,6 +12,7 @@ def get_data_tracking(code):
 
 	for i,row in enumerate(table):
 		if i==1: 
+			dict['code'] = code
 			dict['State'] = str(row.findAll('td')[0]).replace('<td>&nbsp;&nbsp;','').replace('&nbsp;</td>','').replace("  ","")
 			dict['Date'] = str(row.findAll('td')[1]).replace('<td align="center">','').replace('&nbsp;</td>','').replace("  ","")
 			dict['Oficina'] = str(row.findAll('td')[2]).replace('<td>&nbsp;&nbsp;','').replace('&nbsp;</td>','').replace("  ","")
