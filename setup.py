@@ -1,9 +1,6 @@
 import os
 from setuptools import setup, find_packages
 
-__author__ = 'Raul Sepulveda'
-__version__ = '0.0.1'
-
 def read_file(filename):
     """Read a file into a string"""
     path = os.path.abspath(os.path.dirname(__file__))
