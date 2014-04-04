@@ -2,6 +2,9 @@ import urllib
 import json
 from BeautifulSoup import BeautifulSoup
 
+__author__ = 'Raul Sepulveda'
+__version__ = '0.0.1'
+
 def get_data_tracking(code):
 	dict = {}
 	data = urllib.urlencode({"ctl00$ContentPlaceHolder1$stxt":code})
