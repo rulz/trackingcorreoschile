@@ -1,6 +1,6 @@
 import urllib
 import json
-from BeautifulSoup import BeautifulSoup
+import BeautifulSoup
 
 __author__ = 'Raul Sepulveda'
 __version__ = '0.0.3'
@@ -16,7 +16,7 @@ def get_data_tracking(code):
 	dict = {}
 	data = urllib.urlencode({"ctl00$ContentPlaceHolder1$stxt":code})
 	result = urllib.urlopen("http://courier.correos.cl/seguimientoweb/Resumen.aspx", data).read()
-	soup = BeautifulSoup(result)
+	soup = BeautifulSoup.BeautifulSoup(result)
 	table = soup.find('table', {'class': 'tracking'}).findAll('tr')
 
 	for i,row in enumerate(table):
